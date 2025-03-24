@@ -1,45 +1,45 @@
 ---
 id: bcs-instance-overview
 title: BCS 인스턴스 개요
-description: 카카오클라우드 BCS 인스턴스 유형 선택지와 인스턴스 패밀리 등 BCS 인스턴스의 기본 정보를 설명합니다.
+description: This document describes basic information about BCS instances, including options for selecting instance types and Instance family.
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-클라우드 컴퓨팅 환경에서 인스턴스란 가상화된 컴퓨팅 리소스의 단위를 의미합니다. 인스턴스는 일반적으로 [Virtual Machine](/service/bcs/vm)으로 구현되지만,  경우에 따라 가상화되지 않은 물리 서버인 [Bare Metal Server](/service/bcs/bms)에서도 구현할 수 있습니다.
+In a cloud computing environment, an instance refers to a unit of virtualized computing resources.  Instances are typically implemented as [Virtual Machine](/service/bcs/vm). In some cases, however, they can also be implemented as [Bare Metal Servers](/service/bcs/bms), which are non-virtualized physical servers.
 
-모든 Beyond Compute Service(BCS) 인스턴스는 대부분 일반적인 프레임워크와 라이브러리를 지원할 뿐만 아니라, TensorRT, cuDNN, NCCL과 같은 NVIDIA 특화 라이브러리도 지원합니다. 또한, 클라우드 플랫폼에서 제공하는 다양한 기능과 서비스를 활용할 수 있으며, 필요에 따라 유연하게 인스턴스를 조정하거나, 여러 대의 인스턴스를 연결하여 병렬 처리를 수행할 수 있습니다.
+All Beyond Compute Service (BCS) instances not only support common frameworks and libraries but also NVIDIA specialized libraries such as TensorRT, cuDNN, and NCCL. Additionally, you can leverage various features and services provided by the cloud platform and adjust instances flexibly or connect multiple instances for parallel processing as needed.
 
-## 인스턴스 유형 선택  {#choosing-instance-types}
+## ## BCS instance type {#bcs-instance-type}
 
-클라우드 환경에서 비즈니스에 최적화된 인스턴스 유형을 선택하기 위해서는 CPU, 메모리, 스토리지, 네트워크 및 기타 리소스를 포함한 워크로드 요구 사항을 먼저 검토해야 합니다. 예를 들어, 애플리케이션의 성능 요구 사항, 데이터 세트의 크기, 지원해야 하는 사용자 또는 요청 수를 면밀하게 고려할 필요가 있습니다. 또한, 인스턴스 유형에 따라 성능과 비용 수준이 다를 수 있으므로, 지출할 수 있는 예산 범위를 결정해하기 위해 예산 제약 조건도 고려해야 합니다.
+To choose the instance type optimized for your business, you need to review workload requirements, including CPU, memory, storage, network, and other resources.  For example, you should carefully consider performance requirements of your applications, size of datasets, and the number of users or requests to be supported.  Furthermore, since different instance types may vary in performance and cost, you should consider budget constraints to determine the affordable range of spending.
 
-워크로드 요구 사항과 예산을 파악한 후에는 카카오클라우드에서 사용할 수 있는 다양한 인스턴스 유형 제품군을 살펴보아야 합니다. 각 인스턴스 제품군은 CPU, 메모리 및 네트워크 리소스에 따라 다양한 유형의 워크로드에 최적화될 수 있기 때문에, 사용자는 비즈니스 목적에 맞는 인스턴스 유형을 고려해야 합니다. 카카오클라우드는 일반적인 인스턴스 유형과 컴퓨팅 집약적 또는 메모리 집약적인 특정 워크로드에 적합한 인스턴스 유형 또한 지원합니다.<br/>
+After identifying workload requirements and budget, you should examine the various instance types available in KakaoCloud. Each instance type may be optimized for different types of workloads based on CPU, memory, and network resources, so you need to consider the instance type that best suits their business purposes.  KakaoCloud supports both general-purpose instance types and those specialized for compute-intensive or memory-intensive workloads.
 
-카카오클라우드가 제공하는 인스턴스 유형은 다음과 같습니다.
+The instance types offered by KakaoCloud include:
 
-| 인스턴스 유형                                                                                                                          | 인스턴스 패밀리                                                                                                                             |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [범용 인스턴스](/service/bcs/bcs-instance/bcs-type/general-purpose)<br/> (General purpose instance)                 | `m3az`, `m2a`, `t1i`<br/>- 다양한 워크로드에서 사용 가능한 범용 인스턴스                                                                                 |
-| [컴퓨팅 최적화 인스턴스](/service/bcs/bcs-instance/bcs-type/compute-optimized)<br/> (Compute optimized instance)        | `c2a`<br/>- 컴퓨팅 집약적 워크로드에 적합한 인스턴스                                                                                                   |
-| [메모리 최적화 인스턴스](/service/bcs/bcs-instance/bcs-type/memory-optimized)<br/> (Memory optimized instance)          | `r2a` <br/>- 대규모 데이터 처리에 적합한 메모리 집약적 워크로드에 최적화<br/>- 코어당 더 많은 메모리 제공                                                                 |
-| [가속 컴퓨팅 인스턴스](/service/bcs/bcs-instance/bcs-type/accelerated-computing)<br/> (Accelerated computing instance) | `p2a`, `p2i`, `p1i`, `gf1i`, `gn1i` <br/>- GPU, FPGA 등을 필요로 하는 머신러닝(ML), 고성능 컴퓨팅(HPC) 워크로드에 적합 |
-| [비디오 트랜스코딩 인스턴스](/service/bcs/bcs-instance/bcs-type/video-transcoding)<br/> (Video transcoding instance)      | `vt1a`<br/>- 비디오 파일 변환과 같은 작업에 사용되며 다른 형식이나 해상도로 변환 가능                                                                               |
-
-<br/>
-요구사항에 적합한 인스턴스 유형인지 확인하기 위해서는, 인스턴스를 시작한 후 벤치마킹 도구를 사용하여 성능을 측정하는 것이 좋습니다. 이후, 리소스 사용량을 지속해서 모니터링하여 요구사항이 변경되거나 비용의 변화에 따라 인스턴스 유형을 신속하게 변경할 수 있습니다. <br/>
+| Instance type                                                                               | Instance family                                                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [General purpose instances](/service/bcs/bcs-instance/bcs-type/general-purpose)             | `m3az`, `m2a`, `t1i`<br/>- General-purpose instances suitable for various workloads                                                                                                                       |
+| [Compute optimized instances](/service/bcs/bcs-instance/bcs-type/compute-optimized)         | `c2a`<br/>- Instances suitable for compute-intensive workloads                                                                                                                                            |
+| [Memory optimized instances](/service/bcs/bcs-instance/bcs-type/memory-optimized)           | `r2a` <br/>- Optimized for memory-intensive workloads, suitable for large-scale data processing<br/>- Provides more memory per core                                                                       |
+| [Accelerated computing instances](/service/bcs/bcs-instance/bcs-type/accelerated-computing) | `p2a`, `p2i`, `p1i`, `gf1i`, `gn1i` <br/>- Suitable for machine learning (ML), high-performance computing (HPC) workloads requiring GPU, FPGA, etc. |
+| [Video transcoding instances](/service/bcs/bcs-instance/bcs-type/video-transcoding)         | `vt1a`<br/>- Used for tasks like video file conversion, supporting conversion to different formats or resolutions                                                                                         |
 
 <br/>
+To ensure the selected instance type meets the requirements, it is recommended to measure performance using benchmarking tools after starting the instance. Subsequently, it is advisable to continuously monitor resource usage and promptly change instance types if requirements change or there are fluctuations in costs. <br/>
 
-:::info 리전별 인스턴스 개수 제한
-한 리전에서 시작할 수 있는 인스턴스 총수에는 제한이 있으며, 일부 인스턴스 유형에는 또 다른 제한이 있습니다. 인스턴스는 네트워크 인터페이스, 볼륨 연결을 포함해 인스턴스별로 최대 28개까지 연결할 수 있습니다.
+<br/>
+
+:::info Instance Limits per region
+There are limits on the total number of instances that can be launched in a region, and some instance types have additional limits. Each instance can connect to a maximum of 28 resources, including network interfaces and volume attachments.
 :::
 
-## 인스턴스 패밀리 {#instance-families}
+## ## Instance family {#instance-family}
 
-인스턴스 패밀리는 특정한 종류의 워크로드나 용도에 최적화되어 있으며, 비슷한 특성을 가진 여러 인스턴스를 포함하는 그룹입니다. <br/>
-카카오클라우드가 제공하는 다양한 인스턴스 패밀리는 고유한 특징과 조건을 가지고 있으며, Virtual Machine과 Bare Metal Server를 포함한 다양한 형태로 제공됩니다.
+An instance family consists of several instances with similar characteristics and conditions, optimized for specific types of workloads or purposes. <br/>
+KakaoCloud offers various Instance family with unique features and conditions, available in different forms including Virtual Machine and Bare Metal Server.
 
 | 인스턴스 패밀리                                                                                                                                 | Virtual Machine &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Bare Metal Server |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
