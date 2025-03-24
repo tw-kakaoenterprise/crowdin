@@ -1,6 +1,6 @@
 ---
 id: bcs-instance-overview
-title: BCS 인스턴스 개요
+title: BCS instance overview
 description: This document describes basic information about BCS instances, including options for selecting instance types and Instance family.
 ---
 
@@ -41,7 +41,7 @@ There are limits on the total number of instances that can be launched in a regi
 An instance family consists of several instances with similar characteristics and conditions, optimized for specific types of workloads or purposes. <br/>
 KakaoCloud offers various Instance family with unique features and conditions, available in different forms including Virtual Machine and Bare Metal Server.
 
-| 인스턴스 패밀리                                                                                                                                 | Virtual Machine &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Bare Metal Server |
+| Instance family                                                                                                                          | Virtual Machine &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; | Bare Metal Server |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
 | `m3az`                                                                                                                                   | `m3az.large`, `m3az.xlarge`, `m3az.2xlarge`, `m3az.4xlarge`, `m3az.6xlarge`,<br/> `m3az.8xlarge`                                                                                                       |                   |
 | `m2a` &emsp;&emsp;&emsp;&emsp;&emsp; | `m2a.large`, `m2a.xlarge`, `m2a.2xlarge`, `m2a.4xlarge`,<br/> `m2a.8xlarge`, `m2a.12xlarge`, `m2a.16xlarge`, `m2a.24xlarge`                                                                            |                   |
@@ -50,8 +50,8 @@ KakaoCloud offers various Instance family with unique features and conditions, a
 
 <br/>
 
-:::tip Bare Metal Server 인스턴스의 구분
-Virtual Machine 인스턴스는 하이퍼바이저를 통해 가상화된 리소스를 사용하는 반면, Bare Metal Server 인스턴스는 <u>물리 서버에 직접 액세스할 수 있는 인스턴스</u>입니다. 즉, 사용자는 애플리케이션이 필요로 하는 메모리, 디스크, 네트워크 등의 물리적 리소스에 직접 접근할 수 있습니다.
+:::tip Virtual Machine and Bare Metal Server instances
+Virtual Machine instances utilize virtualized resources through a hypervisor, whereas Bare Metal Server instances provide <u>direct access to physical servers</u>, allowing you to directly access physical resources such as memory, disk, and network. It allows you to directly access physical resources such as memory, disk, and network.
 
-카카오클라우드 Bare Metal 인스턴스는 `r2a.baremetal`, `p2a.baremetal` 등의 인스턴스 명칭에 `.baremetal`이 포함됩니다.
+KakaoCloud Bare Metal Server instances are indicated by adding `.baremetal` to the instance name, such as `r2a.baremetal`, `p2a.baremetal`, etc.
 :::
