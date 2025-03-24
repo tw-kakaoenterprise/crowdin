@@ -51,13 +51,6 @@ import TabItem from '@theme/TabItem';
 | `m2a` &emsp;&emsp;&emsp;&emsp;&emsp;  | `m2a.large`, `m2a.xlarge`, `m2a.2xlarge`, `m2a.4xlarge`,<br/> `m2a.8xlarge`, `m2a.12xlarge`, `m2a.16xlarge`, `m2a.24xlarge` |  |
 | `t1i`  | `t1i.nano`, `t1i.micro`, `t1i.small`, `t1i.medium`, `t1i.large`,<br/> `t1i.xlarge`, `t1i.2xlarge`|  |
 | `c2a`    | `c2a.large`, `c2a.xlarge`, `c2a.2xlarge`, `c2a.4xlarge`,<br/> `c2a.8xlarge`, `c2a.12xlarge`, `c2a.16xlarge`, `c2a.24xlarge`|  |
-| `r2a`    | `r2a.large`, `r2a.xlarge`, `r2a.2xlarge`, `r2a.4xlarge`,<br/> `r2a.8xlarge`, `r2a.12xlarge`, `r2a.16xlarge`, `r2a.24xlarge` | `r2a.baremetal` |
-| `p2a`    | | `p2a.baremetal` |
-| `p2i`    | `p2i.6xlarge`, `p2i.12xlarge`, `p2i.24xlarge` | |
-| `p1i`    | | `p1i.baremetal` |
-| `gf1i` | `gf1i.6xlarge`, `gf1i.12xlarge`, `gf1i.24xlarge` | |
-| `gn1i` | `gn1i.xlarge`, `gn1i.2xlarge`, `gn1i.4xlarge`,<br/> `gn1i.8xlarge`, `gn1i.12xlarge`, `gn1i.16xlarge` | |
-| `vt1a` | `vt1a.4xlarge`, `vt1a.8xlarge`, `vt1a.32xlarge` | |
 
 
 <br/>
